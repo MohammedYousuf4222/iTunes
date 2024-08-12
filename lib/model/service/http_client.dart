@@ -25,8 +25,7 @@ class CustomHttpClient {
   }
 
   Future<String> _getPinnedPublicKey() async {
-    // Replace this with your actual pinned public key hash
-    return 'your_pinned_public_key_hash';
+    return await rootBundle.loadString('assets/itunes.crt');
   }
 
   String _hashPublicKey(X509Certificate cert) {
